@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Forms/CkpCreationForm.cs">
+    <Files>
+      <File FileName="CryptokiKeyProvider.cs" Line="151" Column="10" />
+      <File FileName="Pkcs11.cs" Line="27" Column="3" />
+      <File FileName="Forms/CkpCreationForm.cs" Line="27" Column="7" />
+      <File FileName="Forms/CkpPromtForm.cs" Line="28" Column="3" />
+      <File FileName="Properties/AssemblyInfo.cs" Line="5" Column="12" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
