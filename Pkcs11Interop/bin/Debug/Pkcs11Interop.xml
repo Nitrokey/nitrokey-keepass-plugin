@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>/home/test/Pkcs11Interop/src/Pkcs11Interop/bin/Debug/Pkcs11Interop</name>
+        <name>/home/test/Downloads/CryptokiKeyProvider_0.1.1/Pkcs11Interop/bin/Debug/Pkcs11Interop</name>
     </assembly>
     <members>
         <member name="T:Net.Pkcs11Interop.LowLevelAPI.MechanismParams.CK_AES_CBC_ENCRYPT_DATA_PARAMS">

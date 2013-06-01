@@ -73,7 +73,7 @@ namespace CryptokiKeyProvider
         public CryptokiKeyProvider(IPluginHost host)
         {
             m_host = host;
-            getSettings();
+            getSettings(); 
         }
 
 

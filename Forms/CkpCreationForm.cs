@@ -101,6 +101,7 @@ namespace CryptokiKeyProvider.Forms
         private void addKeyfiles2listview()
         {
             listView1.Enabled = true;
+			//this.listView1.Clear();
             foreach (Pkcs11.keyfile keyfile in keyfiles)
             {
                 this.listView1.Items.Add(new ListViewItem(new[] { Convert.ToString(keyfile.slotid), keyfile.token_name, keyfile.label }));
@@ -139,7 +140,10 @@ namespace CryptokiKeyProvider.Forms
 
             try
             {
-                this.keyfiles = Pkcs11.read_allkeyfiles(ofd.FileName);
+				//this.keyfiles = null;
+				//this.listView1.Clear ();
+				this.listView1.Items.Clear();
+				this.keyfiles = Pkcs11.read_allkeyfiles(ofd.FileName);
                 addKeyfiles2listview();
             }
             catch (Exception ex)
@@ -177,6 +181,9 @@ namespace CryptokiKeyProvider.Forms
             Pkcs11.keyfile key = keyfiles[this.listView1.SelectedItems[0].Index];
 			try{
 				Pkcs11.deleteDataObject(key);
+				listView1.Items.Clear();
+				this.keyfiles = Pkcs11.read_allkeyfiles(this.textBox1.Text);
+                addKeyfiles2listview();
 			}catch(Exception ex){
 
 			}
@@ -231,7 +238,9 @@ namespace CryptokiKeyProvider.Forms
 					byte[] bytes = File.ReadAllBytes(ofd.FileName);
 					Pkcs11.createKeyfile(ofd.SafeFileName,bytes);
 					Pkcs11.Logout();
-					keyfiles = Pkcs11.read_allkeyfiles(CryptokiKeyProvider.pkcs11_conf_lib);
+					this.listView1.Items.Clear();
+					//MessageBox.Show(textBox1.Text);
+					keyfiles = Pkcs11.read_allkeyfiles(this.textBox1.Text);
                     addKeyfiles2listview();
 				}
             }
